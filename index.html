@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login page</title>
+	<link rel="stylesheet" type="text/css" href="css/s.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <style>
+        
+*{
+	margin-top: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+body{
+	background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(./3.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+header{
+	top: 12%;
+	left: 50%;
+	float: center;
+	margin-left: -240px;
+	margin-bottom: 180px;
+	color: skyblue;
+	position: absolute;
+	font-size: 40px;
+	
+}
+.loginbox{
+	width: 330px;
+	height: 420px;
+	background: rgba(0,0,0,0.6);
+	color: #f0f8ff;
+	top: 60%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;	
+	padding: 70px 30px;
+}
+h1{
+	margin-bottom: 4px;
+	padding: 0  0  20px;
+	text-align:  center;
+	font-size: 22px;
+}
+
+
+.loginbox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: ivory;
+}
+
+.loginbox input{
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+.loginbox input[type= "text"] , input[type = "password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 30px;
+	color: skyblue;
+	font-size: 16px;
+}
+.fa{
+	margin-right: 20px ;
+}
+
+.eye{
+	position: absolute;
+	margin-left: 240px;
+	margin-top: -51px;
+}
+.user-circle{
+	position: absolute;
+	margin-top: -163px;
+	margin-left: 88px;
+	size: 300%;
+	color: #fb2525;
+}
+#hide1{
+	display: none;
+}
+
+#btn
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #fb2525;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+	transition-property:all;
+	transition-delay: .05s ease;
+}/*
+.loginbox input[type="submit"]: onsubmit{
+
+}*/
+#btn:hover
+{
+	cursor: pointer;
+	background: #ffc107;
+	color: #000;
+}
+
+.loginbox a
+{
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 20px;
+	color: darkgrey;
+}
+
+.loginbox a:hover
+{
+	color: #ffc107;
+}
+        </style>
+        
+</head>
+<body>
+	<header>Welcome! please login to proceed.</header>
+	<div class="loginbox">
+		<h1>LOGIN HERE</h1>
+			<form >
+				<div class="user-circle">
+					<img src="logo1.png" height="100px" width="100px"></div>
+				<p><i class="fa fa-envelope-o"></i> Username</p>
+				<input type="text" id="name" placeholder="Enter username" required="true">
+				<p><i class="fa fa-key"></i>
+				Password</p>
+				<input type="password" name="myInput" placeholder="Enter password" id="myInput" required="true">
+				<span class="eye" onclick="myFunction()">
+				<i id="hide1" class="fa fa-eye" ></i>
+				<i id="hide2" class="fa fa-eye-slash"></i>
+				</span>
+				<input type="button" value="login" id="btn" >
+				<a href="https://manik-jain0821.github.io/mike01.github.io/passlogin.html">Lost your password?</a><br>
+				<a href="https://manik-jain0821.github.io/mike01.github.io/passlogin.html">Dont have an accont?</a>
+				
+			</form>
+		</div>
+		<script>                    
+			function myFunction(){
+				var x = document.getElementById("myInput");
+				var y = document.getElementById("hide1");
+				var z = document.getElementById("hide2");
+
+				if(x.type === 'password'){
+					x.type = "text"
+					y.style.display = "block";
+					z.style.display = "none";
+				}
+				else{
+					x.type = "password"
+					y.style.display = "none";
+					z.style.display = "block";
+				}
+			}
+                    $(document).ready(function(){
+                        $("#btn").click(function(){
+                            var uid = $("#name").val();
+                            var pass = $("#myInput").val();
+                            $.getJSON("login-details.php?uid="+uid+"&pass="+pass,function(response){
+                                if(response == "1"){
+                                    window.location = "homepage.html";
+                                }
+                                else{
+                                    alert("Invalid Username / Passoword");
+                                }
+                            })
+                        })
+                    });
+                </script>
+</body>
+</html>

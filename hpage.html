@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="Ie-edge">
+	<title>css menu-cards</title>
+	<link rel="stylesheet" type="text/css" href="css/hs.css">
+	<style>
+    @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+body{
+/*	margin-top: -90px;*/
+/*	padding: 15px;*/
+/*    padding-right: 3%;*/
+	font-family: "Montserrat",sans-serif;
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(./img/4.jpg);
+	background-size: cover;
+    height: auto;
+
+}
+a{
+	transition: all .5s;
+	text-decoration: none;
+	color: #fff;
+}
+img {
+	width: 100%;
+	height: 60%;
+	transition: all 0.5s;
+}
+section{
+	padding: 80px 0;
+	margin-top: 50px;
+	/*background: url(https://i.pinimg.com/originals/c8/6b/ea/c86bea4a59026569d69ebbd0282f8f7d.jpg);*/
+	text-align: center;
+}
+.container {
+	max-width: 85%;
+/*	width: 100%;*/
+	margin: 0 auto; 
+}
+main{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 30px;
+	margin: 20px 15px 0px 15px;
+	height: 300px;
+}
+header{
+	width: 30%;
+	margin:  9%px auto;
+	transition: translate(50%,10%);
+	font-size: 19px;
+}
+header h1{
+	margin: 40px;
+	padding: 5px;
+	font-size: 60;
+	color: rgba(500,730,40,400) ;
+	font-weight: 500;
+	box-shadow: 0 2px 10px #ccc;
+	
+}
+p{
+	color: rgba(500,80,90,60);
+	margin-bottom: -10px;
+}
+.card{
+	position: relative;
+	margin-top: 15px;
+	overflow: hidden;
+/*	max-height: 500px;*/
+	height: 300px;
+	box-shadow: 0 2px 10px #ccc;
+	transition: all 0.5s;
+    min-width: 200px;
+}
+.card: hover{
+	box-shadow: 0 2px 10px #ccc;
+	transition: all 0.5s;
+}
+.card:hover img{
+	transform: scale(1.15);
+	transition: all 0.4s;
+}
+.blogcontent {
+	position: absolute;
+	left: 0;
+	bottom: -55px;
+    height: 50%;
+	width: 100%;
+	color: #fff;
+	padding: 10px 5px;
+	background: linear-gradient(45deg, rgb(149 ,21 , 153)0% ,rgba(144, 192, 229 , 0.4 ) 100%);
+	transition: all 0.5s;
+}
+.blogcontent h3{
+	font-size: 20px;
+	font-weight: 500;
+	margin: 0;
+}
+.blogcontent h3 span {
+	display: block;
+	font-size: 60%;
+	margin-top: 5px;
+	font-weight: 600px;
+	color: rgba(52, 73, 94, 1);
+}
+.card: hover .blogcontent{
+	bottom: 0;
+	transition: all 0.5s;
+}
+.blogcontent a{
+	font-size: 14px;
+	font-weight: 500;
+}
+.blogcontent .btn{
+	display: block;
+	padding: 5px 10px;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	font-weight: 400;
+}
+.blogcontent .btn: hover{
+	background: rgba(52, 152, 219, 1);
+	transition: all 0.5s;
+	text-decoration: none;
+}
+.blogcontent a: hover{
+	text-decoration: underline;
+}
+        #btn{
+            margin-top: 30px;
+        }
+.btn{
+	top: 5%;
+	margin-top: 70px;
+	bottom: -5%;
+	left:50%;
+    margin-left: 44%;
+/*    position: center;*/
+	padding: 2px 20px;
+	font-size: 30px;
+	box-shadow: 0 2px 10px green;
+	font-weight: 520;
+	background-color: transparent;
+	color: rgba(-900,1630,120,300);
+	background : linear-gradient(rgba(1,0,300,0.5),rgba(0,12,0,0.5));
+    margin-bottom: 20px;
+    
+}
+@media(max-width: 992px){
+	main{
+		grid-template-columns: repeat(4,1fr);
+		grid-gap: 20px;
+	}
+}
+@media(max-width: 767px){
+	main{
+		grid-template-columns: repeat(3,1fr);
+		grid-gap: 15px;
+	}
+	header{
+		width: 95%;
+        margin-top: -50px;
+	}
+	.blogcontent{
+		bottom: 0;
+	}
+}
+@media(max-width: 500px){
+	main{
+		grid-template-columns: repeat(1,1fr);
+	}
+    header{
+        width: 130%;
+        margin-left: -15%;
+    }
+    body{
+        padding: 9%;
+        
+        margin-bottom: 20px;
+    }
+    .card{
+        max-height: 250px;
+    }
+    .btn{
+        position: relative;
+/*        float: left;*/
+        margin-left: -90px;
+    }
+    #p{
+        margin-top: 1000px;
+        margin-left: 500px;
+    }
+    
+}
+        
+/*
+@media(max-width: 1300px){
+	main{
+		grid-template-columns: repeat(5,1fr);
+	}
+    #btn{
+        margin-left: 900px;
+    }
+}
+*/
+
+.btn: hover{
+	background-color: skyblue;
+	color: purple;
+	cursor: pointer;
+	transition: 0.4s;
+}
+    </style>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<header>
+				
+				<h1>Menu Cards</h1>
+				<p>Lorem ipsum dolor, sit amet consectetur elit.</p>
+			</header>
+			<main>
+				<div class="card">
+					<img src="./img/1.jpg" alt="rosted">
+					<div class="blogcontent">
+						<h3>Milk / Doodh <span>breakfast</span></h3>
+						<p> for <a href=""> Rs 44 per 1 Kg</a></p>
+						<a href="" class="btn">read more</a>
+					</div>
+				</div>
+				<div class="card">
+					<img src="./img/2.jpg" alt="rosted">
+					<div class="blogcontent">
+						<h3>Cheese/ Paneer <span>breakfast</span></h3>
+						<p> for <a href=""> Rs 42 per 100g</a></p>
+						<a href="" class="btn">read more</a>
+					</div>
+				</div>
+				<div class="card">
+					<img src="./img/3.jpg" alt="rosted">
+					<div class="blogcontent">
+						<h3>Mattha <span>breakfast</span></h3>
+						<p> for <a href=""> Rs 35 per litre</a></p>
+						<a href="" class="btn">read more</a>
+					</div>
+				</div>
+				<div class="card">
+					<img src="./img/6.jpg" alt="rosted">
+					<div class="blogcontent">
+						<h3>Curd / Dahi <span>breakfast</span></h3>
+						<p> for <a href=""> Rs 55 per 1 Kg</a></p>
+						<a href="" class="btn">read more</a>
+					</div>
+				</div>
+				<div class="card">
+					<img src="./img/7.jpg" alt="rosted">
+					<div class="blogcontent">
+						<h3>Desi Ghee <span>breakfast</span></h3>
+						<p> for <a href=""> Rs 600 per 1 Kg</a></p>
+						<a href="" class="btn">read more</a>
+					</div>
+				</div>
+			</main>
+		</div>
+		</section>
+		<p id="p"></p>
+		<a href=""><button class="btn" id="btn">Order now</button></a>
+	
+
+</body>
+</html>

@@ -1,0 +1,336 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All products </title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <style>
+            .cart-page{
+                margin: 80px auto;
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+            table{
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .cart-info{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            th{
+                text-align: left;
+                padding: 5px;
+                color: #fff;
+                background: #ff523b;
+                font-weight: normal;
+            }
+            td{
+                padding: 10px 5px;
+            }
+            td input{
+                width: 70px;
+                height: 30px;
+                padding: 5px;
+            }
+            td a{
+                color: #ff523b;
+                font-size: 12px;
+            }
+            td img{
+                width: 80px;
+                height: 80px;
+                margin-right: 10px;
+            }
+            .total-price{
+                display: flex;
+                justify-content: flex-end;
+            }
+            .total-price table{
+                border-top: 3px solid #ff523b;
+                width: 100%;
+                max-width: 400px;
+            }
+            td:last-child{
+                text-align: right;
+            }
+            th:last-child{
+                text-align: right;
+            }
+            .btn {
+                /* margin-right: 100px; */
+                margin-left: 1200px;
+                margin-bottom: 50px;
+                height: 40px;
+                width: 120px;
+                margin-top: -60px;
+                background-color:#ff523b;
+                color: rgb(211, 211, 65);
+                font-size: 18px;
+                font-weight: 580;
+            }
+            .btn1{
+                /* margin-right: 100px; */
+                display: none;
+                margin-left: 1200px;
+                margin-bottom: 50px;
+                height: 40px;
+                width: 120px;
+                margin-top: -60px;
+                background-color: rgb(40, 230, 40);
+                color: rgb(238, 238, 32);
+                font-size: 18px;
+                font-weight: 580;
+            }
+            .btn :hover{
+                background-color: rgb(55, 216, 55);
+                transition: all;
+                transition-delay: 0.4s ease;
+            }
+
+
+
+            @media only screen and (max-width: 600px){
+                .row{
+                    text-align: center;
+                }
+                .col-2, .col-3, .col-4{
+                    flex-basis: 100%;
+                }
+                .single-product .row{
+                    padding: 20px 0px;
+                }
+                .single-product h1{
+                    font-size: 26px;
+                    line-height: 32px;
+                }
+                .cart-info p{
+                    display: none;
+                }
+
+            }
+
+        </style>
+    </head>
+    <body class="ord1">
+    <div class="order1" id="o1">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <!-- <img src="" width="125px"> -->
+                </div>
+                <!-- <nav>
+                    <ul id ="MenuItems">
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </nav> -->
+            <!-- <img src="">
+            <img src=""> -->
+            </div>
+        </div>
+
+        <div class="small-container cart-page">
+            <table>
+                <tr>
+                    <th>Products</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="1.jpg" alt="">
+                            <div>
+                                <p>Milk(Doodh)</p>
+                                <small>Price: Rs44 / 1Kg</small>
+                                <!-- <br>
+                                <a href="">Remove</a> -->
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" placeholder="0" value="" onclick="recipt()" id="q1" name="q1" oninput="recipt()" min="0"></td>
+                    <td id="p1">Rs0.00</td>
+                </tr><tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="2.jpg" alt="">
+                            <div>
+                                <p>Butter (Paneer)</p>
+                                <small>Price: Rs42 / 100g</small>
+                                <!-- <br>
+                                <a href="">Remove</a> -->
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" placeholder="0" value="" onclick="recipt()" id="q2" name="q2" oninput="recipt()" min="0"></td>
+                    <td id="p2">Rs0.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="3.jpg" alt="">
+                            <div>
+                                <p>Mattha (lassi)</p>
+                                <small>Price: Rs35 / 1 litre</small>
+                                <!-- <br>
+                                <a href="">Remove</a> -->
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" placeholder="0" value="" onclick="recipt()" name="q3" id="q3"oninput="recipt()" min="0"></td>
+                    <td id="p3">Rs0.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="5.jpg" alt="">
+                            <div>
+                                <p>Curd (dahi)</p>
+                                <small>Price: Rs 55 / 1 Kg</small>
+                                <!-- <br>
+                                <a href="">Remove</a> -->
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" placeholder="0" value="" onclick="recipt()" name="q4" id="q4"oninput="recipt()" min="0"></td>
+                    <td id="p4">Rs0.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="6.jpg" alt="">
+                            <div>
+                                <p>Ghee</p>
+                                <small>Price: Rs150 / 250Kg</small>
+                                <!-- <br>
+                                <a href="">Remove</a> -->
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" placeholder="0" value="" onclick="recipt()" name="q5" id="q5"oninput="recipt()" min="0"></td>
+                    <td id="p5">Rs0.00</td>
+                </tr>
+            </table>
+
+            <div class="total-price">
+                <table>
+                    <tr>
+                        <td>Item charges</td>
+                        <td  id="s1">Rs00.00</td>
+                    </tr><tr>
+                        <td>Delivery tax</td>
+                        <td id="s2">Rs00.00</td>
+                    </tr><tr>
+                        <td>Subtotal</td>
+                        <td id="s3">Rs00.00</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <button value="order"class="btn" onclick="order()" id="btn">Place order</button>
+        <button value="open" class="btn1" onclick="order1()" id="btn1">View Recipt</button>
+    </div>
+<script>
+    recipt = () =>{
+        var i1 = Number(document.getElementById("q1").value);
+        var i2 = Number(document.getElementById("q2").value);
+        var i3 = Number(document.getElementById("q3").value);
+        var i4 = Number(document.getElementById("q4").value);
+        var i5 = Number(document.getElementById("q5").value);
+        var j1 = i1*44;
+        document.getElementById("p1").innerHTML ="Rs"+j1+".00";
+        var j2 = i2*42;
+        document.getElementById("p2").innerHTML ="Rs"+j2+".00";
+        var j3 = i3*35;
+        document.getElementById("p3").innerHTML ="Rs"+j3+".00";
+        var j4 = i4*55;
+        document.getElementById("p4").innerHTML ="Rs"+j4+".00";
+        var j5 = i5*150;
+        document.getElementById("p5").innerHTML ="Rs"+j5+".00";
+
+        var s1 = Number(document.getElementById("s1").value);
+        var s2 = Number(document.getElementById("s2").value);
+        var s3 = Number(document.getElementById("s3").value);
+        var s1 = j1 + j2 + j3 + j4 + j5;
+        if(s1 > 300){
+            var s2=0;
+        }
+        else{
+            var s2 = 20;
+        }
+        if(s1 == 0){
+            var s2 = 0;
+        }
+        var s3 = s1 + s2;
+        document.getElementById("s1").innerHTML ="Rs"+s1+".00";
+        document.getElementById("s2").innerHTML ="Rs"+s2+".00";
+        document.getElementById("s3").innerHTML ="Rs"+s3+".00";
+        var y  = document.getElementById("btn");
+        y.style.display = "block";
+        var x  = document.getElementById("btn1");
+        x.style.display = "none";
+            
+        return s3;
+        }
+        order = () => {
+            var s3 = Number(recipt());
+            if(s3 > 5000){
+            alert("order limit out of reach");
+            location.reload();}
+            else{
+            // var s1 = Number(document.getElementById("s1").value);
+            // var j = 0;
+            if(s3 == 0 ){
+            alert("Can't place order! Cart is empty");
+            }
+            else{
+                alert("order placed!");
+                display();
+            }}
+        }
+        display = () => {
+            var y  = document.getElementById("btn");
+            y.style.display = "none";
+            
+            var x  = document.getElementById("btn1");
+            x.style.display = "block";
+
+            // document.getElementById("btn").innerHTML = "view recipt"
+            
+        }
+        view = () => {
+            
+        }
+        order1 = () => {
+            const p = String(document.getElementById("p1").value);
+
+            var total = Number(q1.value) * 44 + Number(q2.value)*42 + Number(q3.value)*35 + Number(q4.value)*55 + Number(q5.value)*150 ; 
+            if(total<300){
+                total = total + 20;
+            }
+
+            myWindow=window.open('sinp.txt','my window','width=300,height=450,left=1120,top=200');
+            myWindow.document.write( '\r\n<p> <p>Milk * ' + q1.value + '= ' + (q1.value) * 44 );
+    		myWindow.document.write( '\r\n<p> <p>Cheese * ' + q2.value + " = "  + " Rs "+ (q2.value)*42 );
+    		myWindow.document.write( '\r\n<p> <p>Mattha * ' + q3.value + " = " + " Rs " + (q3.value)*35 );
+    		myWindow.document.write( '\r\n<p> <p> Curd   * ' + q4.value + " = " + " Rs " +  (q4.value)*55 );
+            myWindow.document.write( '\r\n<p> <p> Ghee   * ' + q5.value + " = " + " Rs " + (q5.value)*150 );
+            if(total <= 300)
+            {   
+                total = total + 20;
+                myWindow.document.write( '\r\n<p> -----Tax   =  Rs 20.00 </p>  ');
+            
+
+            }
+            myWindow.document.write('<p> <p> ---- Total = '  + " Rs "+ total + '<p> <p> ----------------------End');
+            myWindow.focus();
+    		
+        }
+</script>
+    </body>
+</html>

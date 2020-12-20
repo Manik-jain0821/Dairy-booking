@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>password login</title>
+	<link rel="stylesheet" type="text/css" href="s2.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header></header>
+	<div class="form-box">
+		<h1>Login here</h1>
+			<form action="users.php" >
+				<div class="input-box">
+					<i class="fa fa-envelope-o"></i><br>
+					<input type="email" placeholder="email Id" required="true" id="mail1" name="mail1"><hr>
+					<i class="fa fa-user"></i><br>
+					<input type="text" placeholder="Username" required="true" id="name1" name="name1" ><hr>
+					<i class="fa fa-key"></i><br>
+					<input type="password" placeholder="Email-password" id="myInput" name="myInput" required="true">
+					<span class="eye" onclick="myFunction()">
+						<i id="hide1" class="fa fa-eye" ></i>
+						<i id="hide2" class="fa fa-eye-slash"></i>
+					</span><hr>
+					<input type="submit" value="NEXT">
+				</div>	
+			</form>
+	</div>
+
+		<script>
+			function myFunction(){
+				var x = document.getElementById("myInput");
+				var y = document.getElementById("hide1");
+				var z = document.getElementById("hide2");
+
+				if(x.type === 'password'){
+					x.type = "text"
+					y.style.display = "block";
+					z.style.display = "none";
+				}
+				else{
+					x.type = "password"
+					y.style.display = "none";
+					z.style.display = "block";
+				}
+			}
+		</script>
+</body>
+</html>

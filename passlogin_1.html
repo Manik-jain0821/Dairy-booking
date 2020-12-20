@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>password login</title>
+	<link rel="stylesheet" type="text/css" href="s2.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header></header>
+	<div class="form-box">
+		<h1>Login here</h1>
+		<form name="f">
+			<div class="input-box">
+				<i class="fa fa-user"></i><br>
+				<input type="text" placeholder="Username" required="true"><hr>
+				<i class="fa fa-key"></i><br>
+				<input type="password" placeholder="Enter password" name="pass" required="true"><hr>
+				<i class="fa fa-key"></i><br>
+				<input type="password" placeholder="Confirm password" name="cpass" required="true"><hr>
+			</div>
+			<span class= "check" onclick="myfun()">
+				<input type="submit" value="DONE">
+			</span>
+
+			<script type="text/javascript">
+				function myfun(){
+			var p= f.pass.value;
+			var cp = f.cpass.value;
+			if(p!=cp)
+				alert("password and confirm password should be same")
+			if(p==cp){
+				alert("password changed sucessfully")
+				open('https://manik-jain0821.github.io/mike01.github.io/');
+			}
+			}
+			</script>
+		</form>
+	</div>
+
+</body>
+</html>
